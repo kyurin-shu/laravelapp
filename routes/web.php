@@ -11,6 +11,14 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('person', 'PersonController@index');
+Route::post('person', 'PersonController@create');
+
+Route::get('board', 'BoardController@index');
+Route::post('board', 'BoardController@create');
