@@ -10,6 +10,7 @@
     </tr>
     @endforeach
 </table>
+{{$items->links()}}
 
 <br>
 
