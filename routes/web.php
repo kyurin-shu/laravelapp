@@ -22,3 +22,6 @@ Route::post('person', 'PersonController@create');
 
 Route::get('board', 'BoardController@index');
 Route::post('board', 'BoardController@create');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
