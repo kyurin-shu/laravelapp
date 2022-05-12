@@ -10,6 +10,7 @@ class Person extends Model
     public $timestamps = false;
 
     public static $rule = [
+        'id' => 'integer',
         'name' => 'required',
         'mail' => 'email',
         'age' => 'integer|min:0|max:150'
