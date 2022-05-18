@@ -2526,6 +2526,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2553,6 +2568,11 @@ __webpack_require__.r(__webpack_exports__);
         _this.msg = err.response.data.message;
         _this.people = [];
       });
+    }
+  },
+  computed: {
+    reverseMsg: function reverseMsg() {
+      return this.msg.split('').reverse().join('');
     }
   },
   mounted: function mounted() {}
@@ -40266,7 +40286,18 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("p", [_vm._v(" " + _vm._s(_vm.msg) + " ")]),
+    _c(
+      "p",
+      [
+        _vm._v(" \n        " + _vm._s(_vm.msg) + " \n        "),
+        _c("br"),
+        _vm._v("\n        " + _vm._s(_vm.reverseMsg) + " \n        "),
+        _c("br"),
+        _vm._v(" "),
+        _c("v-slot"),
+      ],
+      1
+    ),
     _vm._v(" "),
     _c("hr"),
     _vm._v(" "),
@@ -40310,6 +40341,26 @@ var render = function () {
         ])
       }),
       0
+    ),
+    _vm._v(" "),
+    _c(
+      "table",
+      [
+        _c("example-component", { tag: "th" }),
+        _vm._v(" "),
+        _c("example-component", { tag: "td" }),
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "ul",
+      [
+        _c("example-component", { tag: "li" }),
+        _vm._v(" "),
+        _c("example-component", { tag: "li" }),
+      ],
+      1
     ),
   ])
 }

@@ -1,6 +1,12 @@
 <template>
     <div class="container">
-        <p> {{msg}} </p>
+        <p> 
+            {{msg}} 
+            <br>
+            {{reverseMsg}} 
+            <br>
+            <v-slot></v-slot>
+        </p>
         <hr>
         <input type="number" v-model="id">
         <button @click="doAction">click</button>
@@ -9,6 +15,15 @@
             <li v-for="(person, key) in people" :key="key">
                 KEY={{key}} / {{person.id}}: {{person.name}} [{{person.mail}}] ({{person.age}})
             </li>
+        </ul>
+
+        <table>
+            <th is="example-component"></th>
+            <td is="example-component"></td>
+        </table>
+        <ul>
+            <li is="example-component"></li>
+            <li is="example-component"></li>
         </ul>
     </div>
 </template>
@@ -41,6 +56,11 @@ export default {
                 this.msg = err.response.data.message;
                 this.people = [];
             })
+        }
+    },
+    computed: {
+        reverseMsg() {
+            return this.msg.split('').reverse().join('');
         }
     },
     mounted() {
