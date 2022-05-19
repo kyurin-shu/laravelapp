@@ -2,11 +2,14 @@
     "include": [
       "./resources/**/*"
     ],
+    "exclude": [
+        "node_modules"
+    ],
     "compilerOptions": {
       "module": "es2015",
       "moduleResolution": "node",
       "target": "es5",
       "sourceMap": true,
       "allowJs": true
-    }
+    },
 }
