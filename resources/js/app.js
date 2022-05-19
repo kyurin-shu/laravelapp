@@ -8,6 +8,9 @@ require('./bootstrap');
 
 // window.Vue = require('vue');
 import Vue from 'vue';
+import Vuex from 'vuex';
+
+Vue.use(Vuex);
 
 /**
  * The following block of code may be used to automatically register your
