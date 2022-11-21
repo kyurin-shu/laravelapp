@@ -1,3 +1,4 @@
 ## プルリクテンプレート
 
 hogehoge
+hugahuga
